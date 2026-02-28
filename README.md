@@ -5,7 +5,7 @@
 ### 1. Overview
 Two scripts:
 - **`predict_solubility.py`** — CLI tool that takes a single peptide sequence and returns the probability of it being **soluble** (0 – 100 %)
-- **`train_model.py`** — retrain the model whenever new peptides are added to `peptides.xlsx`
+- **`train.py`** — retrain the model whenever new peptides are added to `peptides.xlsx`
 
 ---
 
@@ -22,7 +22,7 @@ pip install localcider pandas openpyxl joblib xgboost scikit-learn
 Add new peptides to the `for Training` sheet in `peptides.xlsx` (columns: `Name | Sequence | Experimental solubility`), then run:
 
 ```bash
-python train_model.py
+python train.py
 # → Saves williams_model.joblib
 ```
 
